@@ -1,4 +1,5 @@
 ## CONFIGURANDO um AMBIENTE de DESENVOLVIMENTO LARAVEL no LINUX
+https://www.youtube.com/watch?v=m7ULdRiMd-w&t=324s
 
 
 ## 1.0 Instalar PHP
