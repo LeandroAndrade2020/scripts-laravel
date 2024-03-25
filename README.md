@@ -65,6 +65,9 @@ sudo apt install php8.2-mbstring php8.2-cli php8.2-curl php8.2-xml php8.2-zip ph
 ```bash
 composer global require cpriego/valet-linux
 ```
+```bash
+nano .bashrc
+```
 ## Inserir no final do texto
 
 ```bash
