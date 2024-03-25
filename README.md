@@ -75,6 +75,8 @@ export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 ```
 ```bash
 source ~/.bashrc
+```
+
 ```bash
 valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths
 ```
