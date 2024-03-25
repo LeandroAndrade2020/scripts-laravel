@@ -47,7 +47,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 source ~/.bashrc
 ```
 ```bash
-sudo install node
+nvm install node
 ```
 
 ## 4.0 Instalar valet-linux
