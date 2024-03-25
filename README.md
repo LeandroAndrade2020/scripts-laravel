@@ -3,6 +3,7 @@ https://www.youtube.com/watch?v=m7ULdRiMd-w&t=324s
 
 
 ## 1.0 Instalar PHP
+https://computingforgeeks.com/how-to-install-php-8-2-on-ubuntu/#google_vignette
 
 ```bash
 sudo apt update
@@ -16,6 +17,9 @@ sudo apt install php8.2 -y
 ```
 
 ## 2.0 Instalar composer
+https://getcomposer.org/download/
+
+
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -27,6 +31,8 @@ sudo mv composer.phar /usr/local/bin/composer
 ```
 
 ## 3.0 Instalar nvm
+https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
+
 ```bash
 sudo apt install curl -y 
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
@@ -45,6 +51,8 @@ sudo install node
 ```
 
 ## 4.0 Instalar valet-linux
+https://cpriego.github.io/valet-linux/
+
 ```bash
 sudo systemctl stop apache2 && sudo systemctl disable apache2
 ```
@@ -69,6 +77,9 @@ valet install && valet restart && valet paths && mkdir code && cd code && valet 
 ```
 
 ## 5.0 Instalar docker
+https://computingforgeeks.com/install-docker-docker-compose-on-linux-mint/
+
+
 ```bash
 sudo apt update
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
@@ -85,7 +96,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 ```bash
 cat /etc/apt/sources.list.d/docker.list
 ```
-## Install Docker Engine e Docker Compose
+
+
+## 5.1 Install Docker Engine e Docker Compose
+https://docs.docker.com/engine/install/ubuntu/
+
 ```bash
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
@@ -127,6 +142,8 @@ docker ps
 
 
 ## 6.0 Instalar takeout
+https://github.com/tighten/takeout
+
 ```bash
 composer global require tightenco/takeout
 ```
@@ -145,6 +162,8 @@ composer global require laravel/installer
 
 
 ## 8.0 Terminal zsh
+https://dev.to/henriquemsimoes/instalando-e-configurando-zsh-e-oh-my-zsh-4bem
+
 ```bash
 sudo apt install zsh -y
 ```
