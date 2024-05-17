@@ -352,7 +352,7 @@ alias cu="composer update"
 alias ni="bun install"
 alias nu="bun update"
 alias up="cu && nu && nb && cc && op && nd"
-alisa start="env && ci && cu && ni && nu && nb && cc && op && nd"
+alias start="env && ci && cu && ni && nu && nb && cc && op && nd"
 
 #plugins
 alias debugbar="composer require barryvdh/laravel-debugbar --dev"
