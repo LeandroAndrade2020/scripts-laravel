@@ -482,6 +482,11 @@ sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] h
 ```bash
 sudo apt install pgadmin4-desktop
 ```
+## 11.4 Backup banco de dados no pgsql
+```bash
+pg_dump -U leandro -h localhost -d atribuicao_professor -F c -b -v -f atribuicao_professor.dump 
+```
+
 
 # Licença
 
