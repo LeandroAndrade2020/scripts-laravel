@@ -396,10 +396,68 @@ https://code.visualstudio.com/docs/?dv=linux64_deb
 https://termius.com/download/linux
 ```
 
+## 11.0 Banco de dados 
 
+## 11.1 MySql
+```bash
+sudo apt update
 
+```
+```bash
+sudo apt install mysql-server
 
+```
+Inicie o serviço MySQL e configure para iniciar automaticamente no boot:
+```bash
+sudo systemctl start mysql
+sudo systemctl enable mysql
 
+```
+```bash
+sudo mysql -u root -p
+
+```
+## 11.2 PgSql
+```bash
+sudo apt install postgresql postgresql-contrib
+
+```
+```bash
+sudo systemctl status postgresql
+
+```
+```bash
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+```
+```bash
+sudo -i -u postgres
+
+```
+```bash
+psql
+
+```
+```bash
+CREATE USER leandro WITH PASSWORD 'password';
+
+```
+```bash
+CREATE DATABASE nome_do_banco;
+
+```
+
+```bash
+GRANT ALL PRIVILEGES ON DATABASE nome_do_banco TO leandro;
+
+```
+```bash
+\q
+```
+```bash
+exit
+```
 
 # Licença
 
