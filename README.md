@@ -472,7 +472,7 @@ GRANT ALL PRIVILEGES ON DATABASE nome_do_banco TO leandro;
 ```bash
 exit
 ```
-## 11.3 PgaAdmin4
+## 11.3 PgAdmin4
 ```bash
 curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
 ```
