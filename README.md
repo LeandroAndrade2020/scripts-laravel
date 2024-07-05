@@ -417,6 +417,20 @@ sudo systemctl enable mysql
 sudo mysql -u root -p
 
 ```
+```bash
+sudo mysql
+
+```
+Altere o método de autenticação:
+No console do MySQL, altere o plugin de autenticação para mysql_native_password.
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'nova_senha';
+
+```
+```bash
+exit
+
+```
 ## 11.2 PgSql
 ```bash
 sudo apt install postgresql postgresql-contrib
