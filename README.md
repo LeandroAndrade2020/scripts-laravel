@@ -433,6 +433,9 @@ exit
 
 ```
 ## 11.2 PgSql
+
+https://www.hostinger.com.br/tutoriais/instalar-postgresql-ubuntu-20-04
+
 ```bash
 sudo apt install postgresql postgresql-contrib
 
@@ -454,13 +457,19 @@ sudo -i -u postgres
 psql
 
 ```
+Alterar a senha da conta postgres
+```bash
+ALTER USER postgres PASSWORD 'password';
+```
+```bash
+sudo service postgresql restart
+```
+
 ```bash
 CREATE USER leandro WITH PASSWORD 'password';
-
 ```
 ```bash
 CREATE DATABASE nome_do_banco;
-
 ```
 
 ```bash
