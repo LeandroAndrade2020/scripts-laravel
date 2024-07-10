@@ -424,8 +424,7 @@ sudo mysql
 Altere o método de autenticação:
 No console do MySQL, altere o plugin de autenticação para mysql_native_password.
 ```bash
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'nova_senha';
-
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 ```bash
 exit
