@@ -398,6 +398,8 @@ https://termius.com/download/linux
 
 ## 11.0 Banco de dados 
 
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
+
 ## 11.1 MySql
 ```bash
 sudo apt update
