@@ -469,6 +469,19 @@ sudo service postgresql restart
 CREATE USER leandro WITH PASSWORD 'password';
 ```
 ```bash
+ALTER USER leandro WITH SUPERUSER;
+```
+```bash
+ALTER USER leandro WITH CREATEDB;
+```
+```bash
+ALTER USER leandro WITH CREATEROLE;
+```
+```bash
+ALTER USER usuario_teste WITH CREATEDB;
+```
+
+```bash
 CREATE DATABASE nome_do_banco;
 ```
 
