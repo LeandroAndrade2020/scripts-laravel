@@ -346,6 +346,7 @@ alias form="pa livewire:form"
 alias v="pa make:volt"
 alias pg="php artisan powergrid:create"
 alias ds="php artisan ds:init $(pwd)"
+alias pi="pa iseed"
 
 alias ci="composer install"
 alias cu="composer update"
