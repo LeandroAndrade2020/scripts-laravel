@@ -421,9 +421,19 @@ sudo mysql -u root -p
 
 ```
 ```bash
-sudo mysql
+CREATE USER 'leandro'@'host' IDENTIFIED BY 'PASSWORD';
 
 ```
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'leandro'@'localhost' WITH GRANT OPTION;
+
+
+```
+```bash
+FLUSH PRIVILEGES;
+
+```
+
 Altere o método de autenticação:
 No console do MySQL, altere o plugin de autenticação para mysql_native_password.
 ```bash
