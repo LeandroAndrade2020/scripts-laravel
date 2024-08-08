@@ -421,7 +421,7 @@ sudo mysql -u root -p
 
 ```
 ```bash
-CREATE USER 'leandro'@'host' IDENTIFIED BY 'PASSWORD';
+CREATE USER 'leandro'@'localhost' IDENTIFIED BY 'PASSWORD';
 
 ```
 ```bash
