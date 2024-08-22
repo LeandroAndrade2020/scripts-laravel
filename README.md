@@ -81,85 +81,6 @@ source ~/.bashrc
 valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths
 ```
 
-## 5.0 Instalar docker
-https://computingforgeeks.com/install-docker-docker-compose-on-linux-mint/
-
-
-```bash
-sudo apt update
-sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
-sudo apt -y remove docker docker-engine docker.io containerd runc
-
-```
-```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-```
-```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-```
-```bash
-cat /etc/apt/sources.list.d/docker.list
-```
-
-
-## 5.1 Install Docker Engine e Docker Compose
-https://docs.docker.com/engine/install/ubuntu/
-
-```bash
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-
-```
-```bash
-sudo usermod -aG docker $USER
-```
-```bash
-newgrp docker
-```
-```bash
-docker version
-```
-```bash
-sudo apt-get remove docker docker-engine docker.io containerd runc
-```
-```bash
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-```
-```bash
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-
-```
-```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-```
-```bash
-docker ps
-```
-
-
-## 6.0 Instalar takeout
-https://github.com/tighten/takeout
-
-```bash
-composer global require tightenco/takeout
-```
-```bash
-takeout enable mysql
-```
-```bash
-password
-```
-
-
 ## 7.0 instalar laravel global
 ```bash
 composer global require laravel/installer
@@ -520,6 +441,120 @@ sudo apt install pgadmin4-desktop
 ```bash
 pg_dump -U leandro -h localhost -d atribuicao_professor -F c -b -v -f atribuicao_professor.dump 
 ```
+
+## 12.0 Dual boot Pop Os com Windows 11
+
+```bash
+sudo fdisk -l 
+```
+```bash
+sudo mkdir /mnt/windows
+```
+```bash
+sudo mount /dev/nvme0n1p3 /mnt/windows
+```
+```bash
+sudo cp -r /mnt/windows/EFI/Microsoft /boot/efi/EFI
+```
+```bash
+sudo ls /boot/efi/EFI
+```
+```bash
+sudo nano /boot/efi/loader/loader.conf
+```
+```bash
+default Pop_OS-current
+timeout 5
+console-mode max
+```
+```bash
+sudo umount /mnt/windows 
+```
+```bash
+sudo rm -rf /mnt/windows/
+```
+```bash
+exit
+```
+
+## 5.0 Instalar docker
+https://computingforgeeks.com/install-docker-docker-compose-on-linux-mint/
+
+
+```bash
+sudo apt update
+sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+sudo apt -y remove docker docker-engine docker.io containerd runc
+
+```
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+```bash
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+```
+```bash
+cat /etc/apt/sources.list.d/docker.list
+```
+
+
+## 5.1 Install Docker Engine e Docker Compose
+https://docs.docker.com/engine/install/ubuntu/
+
+```bash
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+```
+```bash
+sudo usermod -aG docker $USER
+```
+```bash
+newgrp docker
+```
+```bash
+docker version
+```
+```bash
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+```bash
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+```
+```bash
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+```
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+```
+```bash
+docker ps
+```
+
+
+## 6.0 Instalar takeout
+https://github.com/tighten/takeout
+
+```bash
+composer global require tightenco/takeout
+```
+```bash
+takeout enable mysql
+```
+```bash
+password
+```
+
 
 
 # Licença
