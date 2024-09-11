@@ -8,12 +8,6 @@ https://computingforgeeks.com/how-to-install-php-8-2-on-ubuntu/#google_vignette
 ```bash
 sudo apt update && sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common && sudo add-apt-repository ppa:ondrej/php && sudo apt install php8.2 -y
 ```
-```bash
-sudo add-apt-repository ppa:ondrej/php
-```
-```bash
-sudo apt install php8.2 -y
-```
 
 ## 2.0 Instalar composer
 https://getcomposer.org/download/
@@ -25,9 +19,6 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b3
 php composer-setup.php
 php -r "unlink('composer-setup.php');"  && sudo mv composer.phar /usr/local/bin/composer
 ```
-```bash
-sudo mv composer.phar /usr/local/bin/composer
-```
 
 ## 3.0 Instalar nvm
 https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
@@ -37,16 +28,7 @@ sudo apt install curl -y
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc
 ```
 ```bash
-source ~/.bashrc
-```
-```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash && source ~/.bashrc && nvm install node
-```
-```bash
-source ~/.bashrc
-```
-```bash
-nvm install node
 ```
 
 ## 4.0 Instalar valet-linux
@@ -55,36 +37,16 @@ https://cpriego.github.io/valet-linux/
 ```bash
 sudo systemctl stop apache2 && sudo systemctl disable apache2 && sudo apt install network-manager libnss3-tools jq xsel -y && sudo apt install php8.2-mbstring php8.2-cli php8.2-curl php8.2-xml php8.2-zip php8.2-mysql php8.2-pgsql php8.2-sqlite3 php8.2-gd -y && composer global require cpriego/valet-linux && nano .bashrc
 ```
-```bash
-sudo apt install network-manager libnss3-tools jq xsel -y
-```
-```bash
-sudo apt install php8.2-mbstring php8.2-cli php8.2-curl php8.2-xml php8.2-zip php8.2-mysql php8.2-pgsql php8.2-sqlite3 php8.2-gd -y
-```
-```bash
-composer global require cpriego/valet-linux
-```
-```bash
-nano .bashrc
-```
+
 ## Inserir no final do texto
 
 ```bash
 export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 ```
+## 7.0 instalar valet e instalar laravel global
 ```bash
 source ~/.bashrc && valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths && composer global require laravel/installer
 ```
-
-```bash
-valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths
-```
-
-## 7.0 instalar laravel global
-```bash
-composer global require laravel/installer
-```
-
 
 ## 8.0 Terminal zsh
 https://dev.to/henriquemsimoes/instalando-e-configurando-zsh-e-oh-my-zsh-4bem
@@ -324,34 +286,22 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 ## 11.1 MySql
 ```bash
 sudo apt update && sudo apt install mysql-server && sudo systemctl start mysql && sudo systemctl enable mysql
-
 ```
-```bash
-sudo apt install mysql-server
 
-```
-Inicie o serviço MySQL e configure para iniciar automaticamente no boot:
-```bash
-sudo systemctl start mysql
-sudo systemctl enable mysql
-
-```
 ```bash
 sudo mysql -u root -p
-
 ```
+
 ```bash
 CREATE USER 'leandro'@'localhost' IDENTIFIED BY 'PASSWORD';
-
 ```
+
 ```bash
 GRANT ALL PRIVILEGES ON *.* TO 'leandro'@'localhost' WITH GRANT OPTION;
-
-
 ```
+
 ```bash
 FLUSH PRIVILEGES;
-
 ```
 
 Altere o método de autenticação:
@@ -450,7 +400,7 @@ sudo fdisk -l
 sudo mkdir /mnt/windows
 ```
 ```bash
-sudo mount /dev/nvme0n1p3 /mnt/windows
+sudo mount /dev/nvme0n1p1 /mnt/windows
 ```
 ```bash
 sudo cp -r /mnt/windows/EFI/Microsoft /boot/efi/EFI
