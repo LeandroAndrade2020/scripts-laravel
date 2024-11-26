@@ -2,29 +2,18 @@
 https://www.youtube.com/watch?v=m7ULdRiMd-w&t=324s
 
 
-## 1.0 Instalar PHP e Instalar composer
+## 1.0 Instalar PHP e Instalar composer e Instalar nvm e Instalar valet-linux
 https://computingforgeeks.com/how-to-install-php-8-2-on-ubuntu/#google_vignette
+https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
+https://cpriego.github.io/valet-linux/
 
 ```bash
 sudo apt update && sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common && sudo add-apt-repository ppa:ondrej/php && sudo apt install php8.2 -y && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" 
 php composer-setup.php
-php -r "unlink('composer-setup.php');"  && sudo mv composer.phar /usr/local/bin/composer
-
-```
-
-## 2.0 Instalar nvm
-https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
-
-```bash
+php -r "unlink('composer-setup.php');"  && sudo mv composer.phar /usr/local/bin/composer &&
 sudo apt install curl -y 
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash && source ~/.bashrc && nvm install node
-```
-
-## 3.0 Instalar valet-linux
-https://cpriego.github.io/valet-linux/
-
-```bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash && source ~/.bashrc && nvm install node &&
 sudo systemctl stop apache2 && sudo systemctl disable apache2 && sudo apt install network-manager libnss3-tools jq xsel -y && sudo apt install php8.2-mbstring php8.2-cli php8.2-curl php8.2-xml php8.2-zip php8.2-mysql php8.2-pgsql php8.2-sqlite3 php8.2-gd -y && composer global require cpriego/valet-linux && nano .bashrc
 ```
 
@@ -33,36 +22,23 @@ sudo systemctl stop apache2 && sudo systemctl disable apache2 && sudo apt instal
 ```bash
 export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 ```
-## 4.0 instalar valet e instalar laravel global
-```bash
-source ~/.bashrc && valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths && composer global require laravel/installer
-```
-
-## 5.0 Terminal zsh
+## 2.0 instalar valet e instalar laravel global e Terminal zsh
 https://dev.to/henriquemsimoes/instalando-e-configurando-zsh-e-oh-my-zsh-4bem
+```bash
+source ~/.bashrc && valet install && valet restart && valet paths && mkdir code && cd code && valet park && valet paths && composer global require laravel/installer && sudo apt install zsh -y && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+```
 
-```bash
-sudo apt install zsh -y
-```
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
-```
 ```bash
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-```
-```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 ```bash
-source ~/.zshrc
-```
-```bash
-nano ~/.zshrc
+source ~/.zshrc && nano ~/.zshrc
 ```
 ```bash
 # If you come from bash you might have to change your $PATH.
@@ -243,12 +219,14 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 
 ```
+```bash
+source ~/.zshrc && nano ~/.zshrc
+```
 
-## 6.0 Banco de dados 
+## 3.0 Banco de dados 
 
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
 
-## 11.1 MySql
 ```bash
 sudo apt update && sudo apt install mysql-server && sudo systemctl start mysql && sudo systemctl enable mysql
 ```
@@ -278,12 +256,12 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 exit
 
 ```
-## 7.0 Instalar Bun e DBeaver e Google Chrome
+## 4.0 Instalar Bun e DBeaver e Google Chrome
 ```bash
 curl -fsSL https://bun.sh/install | bash && wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb && sudo dpkg -i dbeaver-ce_latest_amd64.deb && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
-## 8.0 Aplicativos 
+## 5.0 Aplicativos 
 ```bash
 https://www.microsoft.com/pt-br/edge/download
 ```
@@ -291,7 +269,7 @@ https://www.microsoft.com/pt-br/edge/download
 https://code.visualstudio.com/docs/?dv=linux64_deb
 ```
 
-## 11.2 PgSql
+## 5.1 PgSql
 
 https://www.hostinger.com.br/tutoriais/instalar-postgresql-ubuntu-20-04
 
