@@ -4,6 +4,9 @@ https://www.youtube.com/watch?v=m7ULdRiMd-w&t=324s
 
 ## 1.0 Instalar PHP e Instalar composer e Instalar nvm e Instalar valet-linux
 https://computingforgeeks.com/how-to-install-php-8-2-on-ubuntu/#google_vignette
+
+https://ubuntuhandbook.org/index.php/2024/11/install-or-upgrade-to-php-8-4-in-ubuntu-24-04-22-04/
+
 https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
 https://cpriego.github.io/valet-linux/
 
