@@ -10,6 +10,7 @@ https://ubuntuhandbook.org/index.php/2024/11/install-or-upgrade-to-php-8-4-in-ub
 https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm
 https://cpriego.github.io/valet-linux/
 
+## PHP8.2
 ```bash
 sudo apt update && sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common && sudo add-apt-repository ppa:ondrej/php && sudo apt install php8.2 -y && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" 
@@ -20,6 +21,16 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash &
 sudo systemctl stop apache2 && sudo systemctl disable apache2 && sudo apt install network-manager libnss3-tools jq xsel -y && sudo apt install php8.2-mbstring php8.2-cli php8.2-curl php8.2-xml php8.2-zip php8.2-mysql php8.2-pgsql php8.2-sqlite3 php8.2-gd -y && composer global require cpriego/valet-linux && nano .bashrc
 ```
 
+## PHP8.4
+```bash
+sudo apt update && sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common && sudo add-apt-repository ppa:ondrej/php && sudo apt install php8.4 -y && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" 
+php composer-setup.php
+php -r "unlink('composer-setup.php');"  && sudo mv composer.phar /usr/local/bin/composer &&
+sudo apt install curl -y 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash && source ~/.bashrc && nvm install node &&
+sudo systemctl stop apache2 && sudo systemctl disable apache2 && sudo apt install network-manager libnss3-tools jq xsel -y && sudo apt install php8.4-mbstring php8.4-cli php8.4-curl php8.4-xml php8.4-zip php8.4-mysql php8.4-pgsql php8.4-sqlite3 php8.4-gd -y && composer global require cpriego/valet-linux && nano .bashrc
+```
 ## Inserir no final do texto
 
 ```bash
