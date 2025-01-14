@@ -225,6 +225,7 @@ alias icon="composer require blade-ui-kit/blade-heroicons"
 alias excel="composer require maatwebsite/excel"
 alias bi="curl -fsSL https://bun.sh/install | bash"
 alias volt="composer require livewire/volt && php artisan volt:install"
+alias ide="composer require --dev barryvdh/laravel-ide-helper && php artisan ide-helper:generate && php artisan ide-helper:models"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
