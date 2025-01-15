@@ -216,7 +216,7 @@ alias ni="bun install"
 alias nu="bun update"
 alias up="cu && nu && nb && cc && op && nd"
 alias start="env && ci && cu && ni && nu && nb && cc && op && nd"
-alias lf="rm -rf node_modules package-lock.json && npm install"
+alias lf="rm -rf node_modules package-lock.json && npm install && npm run dev"
 
 #plugins
 alias debugbar="composer require barryvdh/laravel-debugbar --dev"
